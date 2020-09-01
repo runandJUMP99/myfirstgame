@@ -1,0 +1,47 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    overflow: hidden;
+}
+
+#alert {
+    left: 2rem;
+    position: fixed;
+    top: 2rem;
+}
+
+#score {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.grid {
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    height: 80%;
+    margin: auto;
+    max-height: 300px;
+    position: relative;
+    width: 100%;
+}
+
+.dino {
+    background: red;
+    bottom: 0;
+    height: 60px;
+    position: absolute;
+    width: 60px;
+}
+
+.obstacle {
+    background: orange;
+    height: 60px;
+    position: absolute;
+    width: 20px;
+}
