@@ -3,7 +3,6 @@ const alertMessages = ["Press Spacebar to Jump", "Use the Up and Down Arrows To 
 const dino = document.querySelector(".dino");
 const grid = document.querySelector(".grid");
 const score = document.getElementById("score");
-// const gravity = 0.9;
 let count = 1;
 let isJumping = false;
 let isGameOver = false;
@@ -44,17 +43,15 @@ function jump() {
                     }
     
                     position -= 20;
-                    // position *= gravity;  
                     dino.style.bottom = position + "px";
                     count--; 
-                }, 20);
+                }, 25);
             }            
             
         position += 20;
-        // position *= gravity;
         dino.style.bottom = position + "px";
         count++;
-       }, 20);
+       }, 25);
 
     } else if (position >= 239) {
         const timerId = setInterval(() => {
@@ -67,18 +64,16 @@ function jump() {
                         isJumping = false;
                     }
     
-                    position += 20;
-                    // position *= gravity;  
+                    position += 20; 
                     dino.style.bottom = position + "px";
                     count--; 
-                }, 20);
+                }, 25);
             }            
             
             position -= 20;
-            // position *= gravity;
             dino.style.bottom = position + "px";
             count++;
-        }, 20);
+        }, 25);
     }
 }
 
